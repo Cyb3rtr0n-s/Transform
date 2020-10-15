@@ -24,19 +24,12 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/sunwell/Transform'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'sunwell' => 'waynesun1990@gmail.com' }
+  s.author           = { 'wayne' => 'waynesun1990@gmail.com' }
   s.source           = { :git => 'https://github.com/sunwell/Transform.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'Transform/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'Transform' => ['Transform/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
