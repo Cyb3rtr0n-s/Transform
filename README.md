@@ -22,7 +22,7 @@ pod 'Transform'
 
 ## Author
 
-sunwell, waynesun1990@gmail.com
+wayne, waynesun1990@gmail.com
 
 ## License
 
