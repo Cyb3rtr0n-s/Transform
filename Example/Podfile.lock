@@ -1,0 +1,23 @@
+PODS:
+  - Kiwi (3.0.0)
+  - Transform (0.1.0)
+
+DEPENDENCIES:
+  - Kiwi
+  - Transform (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Kiwi
+
+EXTERNAL SOURCES:
+  Transform:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
+  Transform: 4e33cfe253613f0620dec20ffff552e4cc86e213
+
+PODFILE CHECKSUM: b2a99f0c0952217aeb74c11bb8b6c3c9005927a5
+
+COCOAPODS: 1.9.3
