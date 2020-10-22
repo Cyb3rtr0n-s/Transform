@@ -9,14 +9,29 @@
     "file": "LICENSE"
   },
   "authors": {
-    "sunwell": "waynesun1990@gmail.com"
+    "wayne": "waynesun1990@gmail.com"
   },
   "source": {
     "git": "https://github.com/sunwell/Transform.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "Transform/Classes/**/*"
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Transform/Classes/Core/**/*"
+    },
+    {
+      "name": "UnrecognizedSelector",
+      "source_files": "Transform/Classes/UnrecognizedSelector/**/*",
+      "dependencies": {
+        "Transform/Core": [
+
+        ]
+      }
+    }
+  ]
 }

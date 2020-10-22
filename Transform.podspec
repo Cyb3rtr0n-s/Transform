@@ -29,7 +29,17 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-
-  s.source_files = 'Transform/Classes/**/*'
+  s.default_subspec = 'Core'
   
+  # s.source_files = 'Transform/Classes/**/*'
+  s.subspec 'Core' do |core|
+    core.source_files = 'Transform/Classes/Core/**/*'
+    # core.public_header_files = 'CTKCommonDefine.h, CTKCommonLiteral.h'
+  end
+
+  s.subspec 'UnrecognizedSelector' do |unrecognized|
+    unrecognized.source_files = 'Transform/Classes/UnrecognizedSelector/**/*'
+    # unrecognized.public_header_files = 'CTKUnrecognizedSelectorProtector.h'
+    unrecognized.dependency 'Transform/Core'
+  end
 end
