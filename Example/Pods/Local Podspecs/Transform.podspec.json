@@ -22,11 +22,13 @@
   "subspecs": [
     {
       "name": "Core",
-      "source_files": "Transform/Classes/Core/**/*"
+      "source_files": "Transform/Classes/Core/**/*",
+      "public_header_files": "Transform/Classes/Core/**/*.{h}"
     },
     {
       "name": "UnrecognizedSelector",
       "source_files": "Transform/Classes/UnrecognizedSelector/**/*",
+      "public_header_files": "Transform/Classes/UnrecognizedSelector/**/*.h",
       "dependencies": {
         "Transform/Core": [
 

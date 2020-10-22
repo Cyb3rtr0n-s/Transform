@@ -32,14 +32,15 @@ TODO: Add long description of the pod here.
   s.default_subspec = 'Core'
   
   # s.source_files = 'Transform/Classes/**/*'
+
   s.subspec 'Core' do |core|
     core.source_files = 'Transform/Classes/Core/**/*'
-    # core.public_header_files = 'CTKCommonDefine.h, CTKCommonLiteral.h'
+    core.public_header_files = 'Transform/Classes/Core/**/*.{h}'
   end
 
   s.subspec 'UnrecognizedSelector' do |unrecognized|
     unrecognized.source_files = 'Transform/Classes/UnrecognizedSelector/**/*'
-    # unrecognized.public_header_files = 'CTKUnrecognizedSelectorProtector.h'
+    unrecognized.public_header_files = 'Transform/Classes/UnrecognizedSelector/**/*.h'
     unrecognized.dependency 'Transform/Core'
   end
 end
