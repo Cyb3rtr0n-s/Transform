@@ -57,6 +57,12 @@
 		39A79E4068D67CFE215FF9FF8F50DFD5 /* KWStringContainsMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD3A8ABA1FD6B9AB7B1A86868DA4868 /* KWStringContainsMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BBE9B7325441CB900E26943 /* NSMutableArray+CTK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BBE9B7125441CB900E26943 /* NSMutableArray+CTK.h */; };
 		3BBE9B7425441CB900E26943 /* NSMutableArray+CTK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE9B7225441CB900E26943 /* NSMutableArray+CTK.m */; };
+		3BBE9B7B2544202200E26943 /* NSDictionary+CTK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BBE9B792544202200E26943 /* NSDictionary+CTK.h */; };
+		3BBE9B7C2544202200E26943 /* NSDictionary+CTK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE9B7A2544202200E26943 /* NSDictionary+CTK.m */; };
+		3BBE9B832544203C00E26943 /* NSMutableDictionary+CTK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BBE9B812544203C00E26943 /* NSMutableDictionary+CTK.h */; };
+		3BBE9B842544203C00E26943 /* NSMutableDictionary+CTK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE9B822544203C00E26943 /* NSMutableDictionary+CTK.m */; };
+		3BBE9B8B2544205900E26943 /* NSString+CTK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BBE9B892544205900E26943 /* NSString+CTK.h */; };
+		3BBE9B8C2544205900E26943 /* NSString+CTK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE9B8A2544205900E26943 /* NSString+CTK.m */; };
 		3DBBC198220A6E99781CADC3189D36E1 /* KWHaveMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 8587AE24DB255B2F0BA725A15A00BD61 /* KWHaveMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DC4A32E9F870135C404D03A269593DC /* KWBlockRaiseMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E9AB50026338D0AD06A9C7A3D10C4F /* KWBlockRaiseMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E2076BC8C4EEC622C5E0D37BF27B1E9 /* KWGenericMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D17D6F5CA3B08EF5A409BD6D7A558ED4 /* KWGenericMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -293,6 +299,12 @@
 		3A138400974FF815D36DA7797376873C /* KWHaveValueMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWHaveValueMatcher.h; path = Classes/Matchers/KWHaveValueMatcher.h; sourceTree = "<group>"; };
 		3BBE9B7125441CB900E26943 /* NSMutableArray+CTK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+CTK.h"; path = "Transform/Classes/Container/NSMutableArray+CTK.h"; sourceTree = "<group>"; };
 		3BBE9B7225441CB900E26943 /* NSMutableArray+CTK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+CTK.m"; path = "Transform/Classes/Container/NSMutableArray+CTK.m"; sourceTree = "<group>"; };
+		3BBE9B792544202200E26943 /* NSDictionary+CTK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+CTK.h"; path = "Transform/Classes/Container/NSDictionary+CTK.h"; sourceTree = "<group>"; };
+		3BBE9B7A2544202200E26943 /* NSDictionary+CTK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+CTK.m"; path = "Transform/Classes/Container/NSDictionary+CTK.m"; sourceTree = "<group>"; };
+		3BBE9B812544203C00E26943 /* NSMutableDictionary+CTK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+CTK.h"; path = "Transform/Classes/Container/NSMutableDictionary+CTK.h"; sourceTree = "<group>"; };
+		3BBE9B822544203C00E26943 /* NSMutableDictionary+CTK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+CTK.m"; path = "Transform/Classes/Container/NSMutableDictionary+CTK.m"; sourceTree = "<group>"; };
+		3BBE9B892544205900E26943 /* NSString+CTK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+CTK.h"; path = "Transform/Classes/Container/NSString+CTK.h"; sourceTree = "<group>"; };
+		3BBE9B8A2544205900E26943 /* NSString+CTK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+CTK.m"; path = "Transform/Classes/Container/NSString+CTK.m"; sourceTree = "<group>"; };
 		3C382443D278817637C74B2D7986E1B5 /* KWStub.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWStub.m; path = Classes/Stubbing/KWStub.m; sourceTree = "<group>"; };
 		3D9337A34CA6CBD70826928DBF4C17B0 /* Pods-Transform_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Transform_Tests-Info.plist"; sourceTree = "<group>"; };
 		3DD082CD658C47CF805156CAA8079AA3 /* KWBeforeAllNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWBeforeAllNode.h; path = Classes/Nodes/KWBeforeAllNode.h; sourceTree = "<group>"; };
@@ -780,6 +792,12 @@
 				094686BE9592DE34678C1ED0223D21FB /* NSArray+CTK.m */,
 				3BBE9B7125441CB900E26943 /* NSMutableArray+CTK.h */,
 				3BBE9B7225441CB900E26943 /* NSMutableArray+CTK.m */,
+				3BBE9B792544202200E26943 /* NSDictionary+CTK.h */,
+				3BBE9B7A2544202200E26943 /* NSDictionary+CTK.m */,
+				3BBE9B812544203C00E26943 /* NSMutableDictionary+CTK.h */,
+				3BBE9B822544203C00E26943 /* NSMutableDictionary+CTK.m */,
+				3BBE9B892544205900E26943 /* NSString+CTK.h */,
+				3BBE9B8A2544205900E26943 /* NSString+CTK.m */,
 			);
 			name = Container;
 			sourceTree = "<group>";
@@ -921,12 +939,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3879503AB21F7A920FC593B30AEF9C09 /* CTKCommonDefine.h in Headers */,
+				3BBE9B832544203C00E26943 /* NSMutableDictionary+CTK.h in Headers */,
 				3BBE9B7325441CB900E26943 /* NSMutableArray+CTK.h in Headers */,
 				E9C767F0C713855938CE29AE558E23BA /* CTKCommonLiteral.h in Headers */,
 				624EEEA8EBCFBFF68311A3F2C515372E /* CTKUnrecognizedSelectorProtector.h in Headers */,
 				F4C2D38021FBF4CB99A6B03EED45ACAC /* NSArray+CTK.h in Headers */,
 				8ACB4A497EDB783DE3E0CE5C101A6603 /* NSObject+CTK.h in Headers */,
 				F9B30B537EA6F4704B2191C380A9C31F /* NSObject+Runtime.h in Headers */,
+				3BBE9B7B2544202200E26943 /* NSDictionary+CTK.h in Headers */,
+				3BBE9B8B2544205900E26943 /* NSString+CTK.h in Headers */,
 				C1735AD5E84218E271A9E2654287CFB4 /* Transform-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1283,11 +1304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BBE9B7C2544202200E26943 /* NSDictionary+CTK.m in Sources */,
 				B7A77D2AF84681454CD1455C0D2AC3F0 /* CTKUnrecognizedSelectorProtector.m in Sources */,
+				3BBE9B842544203C00E26943 /* NSMutableDictionary+CTK.m in Sources */,
 				13597DF9D024A3E0ADDEFFEE580FD80A /* NSArray+CTK.m in Sources */,
 				3BBE9B7425441CB900E26943 /* NSMutableArray+CTK.m in Sources */,
 				47D4E66E792F06B901EB5E5FF92CA3D5 /* NSObject+CTK.m in Sources */,
 				2EE63CA886CBAAF683D85C7D0F6BDB4E /* NSObject+Runtime.m in Sources */,
+				3BBE9B8C2544205900E26943 /* NSString+CTK.m in Sources */,
 				5F17B1B881869722A9EB3600E1EAD1C0 /* Transform-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
