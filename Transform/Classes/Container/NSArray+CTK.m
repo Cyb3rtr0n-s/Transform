@@ -6,9 +6,9 @@
 //
 
 #import "NSArray+CTK.h"
-#import "NSObject+Runtime.h"
 #import <objc/runtime.h>
-#import "CTKCommonDefine.h"
+#import <NSObject+Runtime.h>
+#import <CTKCommonDefine.h>
 
 @implementation NSArray (CTK)
 + (void)load {
