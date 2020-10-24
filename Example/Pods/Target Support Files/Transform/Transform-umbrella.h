@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "NSArray+CTK.h"
 #import "CTKCommonDefine.h"
 #import "CTKCommonLiteral.h"
 #import "NSObject+CTK.h"

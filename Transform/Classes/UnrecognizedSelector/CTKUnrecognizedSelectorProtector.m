@@ -11,9 +11,4 @@
 
 @implementation CTKUnrecognizedSelectorProtector
 
-- (id)_ctkProtected(id self, SEL sel) {
-    ctk_debug_log([NSString stringWithFormat:@"Selector %@ is protected.", NSStringFromSelector(sel)]);
-    return nil;
-}
-
 @end

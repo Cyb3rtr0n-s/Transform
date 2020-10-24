@@ -28,7 +28,17 @@
     {
       "name": "UnrecognizedSelector",
       "source_files": "Transform/Classes/UnrecognizedSelector/**/*",
-      "public_header_files": "Transform/Classes/UnrecognizedSelector/**/*.h",
+      "public_header_files": "Transform/Classes/UnrecognizedSelector/**/*.{h}",
+      "dependencies": {
+        "Transform/Core": [
+
+        ]
+      }
+    },
+    {
+      "name": "Container",
+      "source_files": "Transform/Classes/Container/**/*",
+      "public_header_files": "Transform/Classes/Container/**/*.{h}",
       "dependencies": {
         "Transform/Core": [
 

@@ -9,7 +9,7 @@
 #import <objc/runtime.h>
 #import "NSObject+Runtime.h"
 #import "CTKCommonDefine.h"
-#import "CTKCommonLiteral.h"
+#import "CTKUnrecognizedSelectorProtector.h"
 
 const void * ctkprotectorkey = &ctkprotectorkey;
 
@@ -26,11 +26,8 @@ const void * ctkprotectorkey = &ctkprotectorkey;
         return [self ctk_forwardingTargetForSelector:aSelector];
     }
     
-    Class protectorClass = NSClassFromString(CTKUnrecognizedSelectorProtector);
-    SEL protectedSEL = NSSelectorFromString(CTKProtectedSelector);
-    Method oriMethod = class_getInstanceMethod(protectorClass, protectedSEL);
-    class_addMethod(protectorClass, aSelector, method_getImplementation(oriMethod), method_getTypeEncoding(oriMethod));
-    self.ctkprotector = [protectorClass new];
+    class_addMethod(CTKUnrecognizedSelectorProtector.class, aSelector, (IMP)_ctkProtected, "@@:");
+    self.ctkprotector = [CTKUnrecognizedSelectorProtector new];
     return self.ctkprotector;
 }
 

@@ -40,7 +40,14 @@ TODO: Add long description of the pod here.
 
   s.subspec 'UnrecognizedSelector' do |unrecognized|
     unrecognized.source_files = 'Transform/Classes/UnrecognizedSelector/**/*'
-    unrecognized.public_header_files = 'Transform/Classes/UnrecognizedSelector/**/*.h'
+    unrecognized.public_header_files = 'Transform/Classes/UnrecognizedSelector/**/*.{h}'
     unrecognized.dependency 'Transform/Core'
   end
+
+  s.subspec 'Container' do |container|
+    container.source_files = 'Transform/Classes/Container/**/*'
+    container.public_header_files = 'Transform/Classes/Container/**/*.{h}'
+    container.dependency 'Transform/Core'
+  end
+
 end
