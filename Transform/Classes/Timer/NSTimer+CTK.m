@@ -52,7 +52,7 @@
     return [self timerWithTimeInterval:timeInterval
                                 target:self
                               selector:@selector(ctk_executeBlockFromTimer:)
-                              userInfo:[blovk copy]
+                              userInfo:[block copy]
                                repeats:repeats];
 }
 
