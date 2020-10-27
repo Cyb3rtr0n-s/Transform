@@ -3,12 +3,18 @@ PODS:
   - Transform/Container (0.1.0):
     - Transform/Core
   - Transform/Core (0.1.0)
+  - Transform/KVO (0.1.0):
+    - Transform/Core
+  - Transform/Timer (0.1.0):
+    - Transform/Core
   - Transform/UnrecognizedSelector (0.1.0):
     - Transform/Core
 
 DEPENDENCIES:
   - Kiwi
   - Transform/Container (from `../`)
+  - Transform/KVO (from `../`)
+  - Transform/Timer (from `../`)
   - Transform/UnrecognizedSelector (from `../`)
 
 SPEC REPOS:
@@ -21,8 +27,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
-  Transform: 02e405b82283e5c11fce7d873a3cd01f1f376000
+  Transform: 3654bdc82c89fd38ffd6e9595b3da44b4571ea61
 
-PODFILE CHECKSUM: 04ee609b8530cd989bea1f9a020d4875e66b83e3
+PODFILE CHECKSUM: a5c2af03ac4ed7f2947a44925db78cba1047d0c0
 
 COCOAPODS: 1.9.3

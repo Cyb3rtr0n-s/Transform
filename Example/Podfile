@@ -5,6 +5,8 @@ platform :ios, '9.0'
 target 'Transform_Example' do
   pod 'Transform/UnrecognizedSelector', :path => '../'
   pod 'Transform/Container', :path => '../'
+  pod 'Transform/Timer', :path => '../'
+  pod 'Transform/KVO', :path => '../'
 
   target 'Transform_Tests' do
     inherit! :search_paths

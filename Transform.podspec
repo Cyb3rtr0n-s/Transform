@@ -50,4 +50,15 @@ TODO: Add long description of the pod here.
     container.dependency 'Transform/Core'
   end
 
+  s.subspec 'Timer' do |timer|
+    timer.source_files = 'Transform/Classes/Timer/**/*'
+    timer.public_header_files = 'Transform/Classes/Timer/**/*.{h}'
+    timer.dependency 'Transform/Core'
+  end
+
+  s.subspec 'KVO' do |kvo|
+    kvo.source_files = 'Transform/Classes/KVO/**/*'
+    kvo.public_header_files = 'Transform/Classes/KVO/**/*.{h}'
+    kvo.dependency 'Transform/Core'
+  end
 end
