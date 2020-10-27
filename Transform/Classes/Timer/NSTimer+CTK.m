@@ -7,37 +7,32 @@
 
 #import "NSTimer+CTK.h"
 #import <NSObject+Runtime.h>
-#import "CTKTimerManager.h"
 
 @implementation NSTimer (CTK)
 
-+ (void)load {
-    [NSTimer swizzleClassMethodWithOriginalSel:@selector(scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:) swizzledSel:@selector(ctk_scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:)];
-}
-
-+ (NSTimer *)ctk_scheduledTimerWithTimeInterval:(NSTimeInterval)ti
-                                         target:(id)aTarget
-                                       selector:(SEL)aSelector
-                                       userInfo:(nullable id)userInfo
-                                        repeats:(BOOL)yesOrNo {
-    if (yesOrNo) {
-        CTKTimerManager *manager = [[CTKTimerManager alloc] init];
-        manager.weakTarget = aTarget;
-        manager.weakSEL = aSelector;
-        manager.weakTimer = [self ctk_scheduledTimerWithTimeInterval:ti
-                                                              target:aTarget
-                                                            selector:aSelector
-                                                            userInfo:userInfo
-                                                             repeats:yesOrNo];
-        return manager.weakTimer;
-    } else {
-        return [self ctk_scheduledTimerWithTimeInterval:ti
-                                                 target:aTarget
-                                               selector:aSelector
-                                               userInfo:userInfo
-                                                repeats:yesOrNo];
-    }
-}
+//+ (NSTimer *)ctk_scheduledTimerWithTimeInterval:(NSTimeInterval)ti
+//                                         target:(id)aTarget
+//                                       selector:(SEL)aSelector
+//                                       userInfo:(nullable id)userInfo
+//                                        repeats:(BOOL)yesOrNo {
+//    if (yesOrNo) {
+//        CTKTimerManager *manager = [[CTKTimerManager alloc] init];
+//        manager.weakTarget = aTarget;
+//        manager.weakSEL = aSelector;
+//        manager.weakTimer = [self ctk_scheduledTimerWithTimeInterval:ti
+//                                                              target:aTarget
+//                                                            selector:aSelector
+//                                                            userInfo:userInfo
+//                                                             repeats:yesOrNo];
+//        return manager.weakTimer;
+//    } else {
+//        return [self ctk_scheduledTimerWithTimeInterval:ti
+//                                                 target:aTarget
+//                                               selector:aSelector
+//                                               userInfo:userInfo
+//                                                repeats:yesOrNo];
+//    }
+//}
 
 + (id)ctk_scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval
                                    block:(void (^)(NSTimer *timer))block
