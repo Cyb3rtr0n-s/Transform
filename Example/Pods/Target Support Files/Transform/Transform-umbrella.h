@@ -20,7 +20,6 @@
 #import "NSObject+CTK.h"
 #import "NSObject+Runtime.h"
 #import "CTKKVODelegate.h"
-#import "CTKTimerManager.h"
 #import "NSTimer+CTK.h"
 #import "CTKUnrecognizedSelectorProtector.h"
 
