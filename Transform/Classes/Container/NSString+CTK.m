@@ -51,6 +51,6 @@
     }
     
     NSRange range = [self rangeOfString:string];
-    return range != NSNotFound;
+    return range.length != 0;
 }
 @end

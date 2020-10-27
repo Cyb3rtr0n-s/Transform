@@ -28,7 +28,7 @@
 
 - (id)ctk_objectAtIndex:(NSUInteger)index {
     if (index < self.count) {
-        [self ctk_objectAtIndex:index];
+        return [self ctk_objectAtIndex:index];
     } else {
         ctk_debug_log(@"Index out of bounds.");
         return nil;
