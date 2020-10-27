@@ -8,10 +8,11 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class CTKKVODelegate;
 @interface NSObject (CTK)
 
 @property (nonatomic, strong) id ctkprotector;
+@property (nonatomic, strong, readonly) CTKKVODelegate *kvoDelegate;
 
 /// Swizzle forwardingTargetForSelector
 /// @param aSelector aSelector

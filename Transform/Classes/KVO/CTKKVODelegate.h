@@ -9,8 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CTKKVODelegate : NSObject
+@interface CTKKVOInfo : NSObject
+@property (nonatomic, weak) id observer;
+@end
 
+@interface CTKKVODelegate : NSObject
+@property (nonatomic, strong) NSMutableDictionary *kvoInfoMaps;
+@property (nonatomic, weak) id weakObservedObject;
 @end
 
 NS_ASSUME_NONNULL_END
