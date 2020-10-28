@@ -34,9 +34,9 @@
     
     [obArray removeObjectsInArray:invalidArray];
     
-    if (!obArray.count) {
+    if (obArray.count == 0) {
         [self.weakObservedObject removeObserver:self forKeyPath:keyPath];
-        self.kvoObserverMaps[keyPath] = nil;
+        [self.kvoObserverMaps removeObjectForKey:keyPath];
     }
 }
 
