@@ -64,6 +64,16 @@
 
         ]
       }
+    },
+    {
+      "name": "Zombie",
+      "source_files": "Transform/Classes/Zombie/**/*",
+      "public_header_files": "Transform/Classes/Zombie/**/*.{h}",
+      "dependencies": {
+        "Transform/Core": [
+
+        ]
+      }
     }
   ]
 }

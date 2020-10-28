@@ -61,4 +61,10 @@ TODO: Add long description of the pod here.
     kvo.public_header_files = 'Transform/Classes/KVO/**/*.{h}'
     kvo.dependency 'Transform/Core'
   end
+
+  s.subspec 'Zombie' do |zombie|
+    zombie.source_files = 'Transform/Classes/Zombie/**/*'
+    zombie.public_header_files = 'Transform/Classes/Zombie/**/*.{h}'
+    zombie.dependency 'Transform/Core'
+  end
 end

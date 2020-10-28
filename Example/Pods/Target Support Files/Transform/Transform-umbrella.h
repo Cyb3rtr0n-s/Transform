@@ -22,6 +22,8 @@
 #import "CTKKVODelegate.h"
 #import "NSTimer+CTK.h"
 #import "CTKUnrecognizedSelectorProtector.h"
+#import "CTKZombie.h"
+#import "NSObject+CTKZombie.h"
 
 FOUNDATION_EXPORT double TransformVersionNumber;
 FOUNDATION_EXPORT const unsigned char TransformVersionString[];

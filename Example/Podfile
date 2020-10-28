@@ -7,6 +7,7 @@ target 'Transform_Example' do
   pod 'Transform/Container', :path => '../'
   pod 'Transform/Timer', :path => '../'
   pod 'Transform/KVO', :path => '../'
+  pod 'Transform/Zombie', :path => '../'
 
   target 'Transform_Tests' do
     inherit! :search_paths
