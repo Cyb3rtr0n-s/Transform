@@ -18,34 +18,34 @@
                          forObject:(id)object
                             change:(NSDictionary<NSKeyValueChangeKey,id> *)change
                            context:(void *)context {
-    NSMutableArray *infoArray = [NSMutableArray arrayWithArray:[self.kvoInfoMaps objectForKey:keyPath]];
+    NSMutableArray *obArray = [NSMutableArray arrayWithArray:[self.kvoObserverMaps objectForKey:keyPath]];
     NSMutableArray *invalidArray = [NSMutableArray array];
     
-    for (CTKKVOInfo *info in infoArray) {
-        if (!info.observer) {
-            [invalidArray addObject:info];
+    for (CTKKVOObserver *ob in obArray) {
+        if (!ob.observer) {
+            [invalidArray addObject:ob];
         } else {
-            [info.observer observeValueForKeyPath:keyPath
-                                         ofObject:object
-                                           change:change
-                                          context:context];
+            [ob.observer observeValueForKeyPath:keyPath
+                                       ofObject:object
+                                         change:change
+                                        context:context];
         }
     }
     
-    [infoArray removeObjectsInArray:invalidArray];
+    [obArray removeObjectsInArray:invalidArray];
     
-    if (!infoArray.count) {
+    if (!obArray.count) {
         [self.weakObservedObject removeObserver:self forKeyPath:keyPath];
-        self.kvoInfoMaps[keyPath] = nil;
+        self.kvoObserverMaps[keyPath] = nil;
     }
 }
 
 #pragma mark - Getter & Setter
-- (NSMutableDictionary *)kvoInfoMaps {
-    if (!_kvoInfoMaps) {
-        _kvoInfoMaps = [[NSMutableDictionary alloc] init];
+- (NSMutableDictionary *)kvoObserverMaps {
+    if (!_kvoObserverMaps) {
+        _kvoObserverMaps = [[NSMutableDictionary alloc] init];
     }
-    return _kvoInfoMaps;
+    return _kvoObserverMaps;
 }
 
 @end
