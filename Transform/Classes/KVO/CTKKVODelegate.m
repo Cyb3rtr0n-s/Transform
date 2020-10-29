@@ -8,6 +8,9 @@
 #import "CTKKVODelegate.h"
 #import <NSObject+Runtime.h>
 
+@implementation CTKKVOObserver
+@end
+
 @implementation CTKKVODelegate
 
 + (void)load {

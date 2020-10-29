@@ -34,6 +34,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// Is one class's bundle is main bundle.
 /// @param cls cls
 + (BOOL)isMainBundleClass:(Class)cls;
+
+/// Register a class with a selector at runtime.
+/// @param aSelector aSelector
++ (Class)registerClassWithSel:(SEL)aSelector;
 @end
 
 NS_ASSUME_NONNULL_END

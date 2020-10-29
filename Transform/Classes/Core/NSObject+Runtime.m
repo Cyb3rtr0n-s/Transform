@@ -7,6 +7,13 @@
 
 #import "NSObject+Runtime.h"
 #import <objc/runtime.h>
+#import "CTKCommonLiteral.h"
+#import "CTKCommonDefine.h"
+
+id _ctkProtected(id self, SEL sel) {
+    ctk_debug_log([NSString stringWithFormat:@"Selector %@ is protected.", NSStringFromSelector(sel)]);
+    return nil;
+}
 
 @implementation NSObject (Runtime)
 
@@ -37,16 +44,15 @@
     return cls && [[NSBundle bundleForClass:cls] isEqual:[NSBundle mainBundle]];
 }
 
-//+ (Class)registerClass:(char *)clsStr
-//               andSel:(SEL)aSelector {
-//    Class protector = objc_getClass(clsStr);
-//    if (!protector) {
-//        protector = objc_allocateClassPair([NSObject class], clsStr, sizeof([NSObject class]));
-//        objc_registerClassPair(protector);
-//    }
-//    class_addMethod(protector, aSelector, (IMP)_ctkProtected, "@@:");
-//    return protector;
-//}
++ (Class)registerClassWithSel:(SEL)aSelector {
+    Class protector = objc_getClass(CTK_Protector_Temp_Class);
+    if (!protector) {
+        protector = objc_allocateClassPair([NSObject class], CTK_Protector_Temp_Class, sizeof([NSObject class]));
+        objc_registerClassPair(protector);
+    }
+    class_addMethod(protector, aSelector, (IMP)_ctkProtected, "@@:");
+    return protector;
+}
 
 #pragma mark - Helper
 + (void)_ctkSwizzleWithOriginalMethod:(Method)oriMethod

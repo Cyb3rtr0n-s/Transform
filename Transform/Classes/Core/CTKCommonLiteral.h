@@ -8,5 +8,6 @@
 #ifndef CTKCommonLiteral_h
 #define CTKCommonLiteral_h
 
+char * const CTK_Protector_Temp_Class = "_ctkProtectorTemp";
 
 #endif /* CTKCommonLiteral_h */

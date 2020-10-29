@@ -6,8 +6,6 @@
 //
 
 #import "CTKUnrecognizedSelectorProtector.h"
-#import "CTKCommonDefine.h"
-#import "CTKCommonLiteral.h"
 
 @implementation CTKUnrecognizedSelectorProtector
 

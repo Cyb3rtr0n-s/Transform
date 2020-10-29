@@ -9,7 +9,6 @@
 #import <objc/runtime.h>
 #import "NSObject+Runtime.h"
 #import "CTKCommonDefine.h"
-#import "CTKUnrecognizedSelectorProtector.h"
 #import "CTKKVODelegate.h"
 
 const void * CTK_AssociationKey_Protector = &CTK_AssociationKey_Protector;
@@ -30,8 +29,8 @@ const void * CTK_AssociationKey_KVO = &CTK_AssociationKey_KVO;
         return [self ctk_forwardingTargetForSelector:aSelector];
     }
     
-    class_addMethod(CTKUnrecognizedSelectorProtector.class, aSelector, (IMP)_ctkProtected, "@@:");
-    self.ctkprotector = [CTKUnrecognizedSelectorProtector new];
+    Class tempProtector = [NSObject registerClassWithSel:aSelector];
+    self.ctkprotector = [tempProtector new];
     return self.ctkprotector;
 }
 
