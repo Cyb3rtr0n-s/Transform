@@ -6,7 +6,15 @@
 //
 
 #import "NSObject+CTKZombie.h"
+#import <NSObject+Runtime.h>
+#import <CTKCommonDefine.h>
 
 @implementation NSObject (CTKZombie)
+
++ (void)load {
+    
+}
+
+
 
 @end
