@@ -10,7 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (CTKZombie)
+@property (nonatomic, assign) BOOL needZombieProtector;
 
+- (void)ctk_zombieDealloc;
 @end
 
 NS_ASSUME_NONNULL_END
