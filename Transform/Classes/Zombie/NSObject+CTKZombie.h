@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (CTKZombie)
 @property (nonatomic, assign) BOOL needZombieProtector;
+@property (nonatomic, copy) NSString *originalClassName;
 
 - (void)ctk_zombieDealloc;
 @end

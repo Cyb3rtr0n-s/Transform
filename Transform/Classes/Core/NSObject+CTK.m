@@ -20,7 +20,7 @@ const void * CTK_AssociationKey_KVO = &CTK_AssociationKey_KVO;
     [self swizzleInstanceMethodWithOriginalSel:@selector(forwardingTargetForSelector:) swizzledSel:@selector(ctk_forwardingTargetForSelector:)];
     [self swizzleInstanceMethodWithOriginalSel:@selector(addObserver:forKeyPath:options:context:) swizzledSel:@selector(ctk_addObserver:forKeyPath:options:context:)];
     [self swizzleInstanceMethodWithOriginalSel:@selector(removeObserver:forKeyPath:) swizzledSel:@selector(ctk_removeObserver:forKeyPath:)];
-    [self swizzleInstanceMethodWithOriginalSel:@selector(dealloc) swizzledSel:@selector(ctk_dealloc)];
+    [self swizzleInstanceMethodWithOriginalSel:NSSelectorFromString(@"dealloc") swizzledSel:@selector(ctk_dealloc)];
 }
 
 - (void)ctk_dealloc {
