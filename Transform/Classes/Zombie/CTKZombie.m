@@ -9,11 +9,13 @@
 #import <NSObject+Runtime.h>
 #import <NSObject+CTK.h>
 #import <CTKCommonDefine.h>
+#import "NSObject+CTKZombie.h"
 
 @implementation CTKZombie
 
 - (id)forwardingTargetForSelector:(SEL)aSelector {
-    ctk_debug_log([NSString stringWithFormat:@"This is a bad access crash for selector: %@", NSStringFromSelector(aSelector)]);
+    ctk_debug_log([NSString stringWithFormat:@"This is a bad access crash for class: %@ and selector: %@", self.originalClassName, NSStringFromSelector(aSelector)]);
+    
     Class tempProtector = [NSObject registerClassWithSel:aSelector];
     if (!self.ctkprotector) {
         self.ctkprotector = [tempProtector new];

@@ -11,16 +11,20 @@
 #import <CTKCommonDefine.h>
 #import "CTKZombie.h"
 
-static void * const CTK_AssociationKey_NeedZombieProtector = &CTK_AssociationKey_NeedZombieProtector;
-static void * const CTK_AssociationKey_OriginalClassName = &CTK_AssociationKey_OriginalClassName;
+static const void * CTK_AssociationKey_NeedZombieProtector = &CTK_AssociationKey_NeedZombieProtector;
+static const void * CTK_AssociationKey_OriginalClassName = &CTK_AssociationKey_OriginalClassName;
 
-static NSString * const ctkZombieQueueName = @"com.transform.zombie_operation_queue";
+static char * const ctkZombieQueueName = "com.transform.zombie_operation_queue";
 static dispatch_queue_t ctkZombieQueue;
 static NSInteger const kMaxZombieCacheCount = 4;
+static NSInteger const kFreeZombieCountPerTime = 2;
 static NSMutableArray *cachedZombies;
 static NSArray<NSString *> *whiteListZombies;
 static NSArray<NSString *> *blackListZombies;
 
+static void freeZombies(int count) {
+    
+}
 
 @implementation NSObject (CTKZombie)
 
@@ -48,10 +52,18 @@ static NSArray<NSString *> *blackListZombies;
     castObj.originalClassName = NSStringFromClass(self.class);
     
     objc_destructInstance(self);
+#warning Error with objc_setClass
 //    objc_setClass(self, [CTKZombie class]);
     
     dispatch_async(ctkZombieQueue, ^{
+        // Zombies limit in memory.
+        NSUInteger count = cachedZombies.count;
+        if (count > kMaxZombieCacheCount) {
+            freeZombies(MIN((int)count, (int)kFreeZombieCountPerTime));
+        }
         
+        NSValue *value = [NSValue valueWithNonretainedObject:self];
+        [cachedZombies addObject:value];
     });
 }
 

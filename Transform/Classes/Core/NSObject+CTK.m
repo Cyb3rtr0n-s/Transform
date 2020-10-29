@@ -28,7 +28,7 @@ const void * CTK_AssociationKey_KVO = &CTK_AssociationKey_KVO;
     for (NSString *keyPath in allKeyPaths) {
         [self ctk_removeObserver:self.kvoDelegate forKeyPath:keyPath];
     }
-    self.kvoDelegate.kvoObserverMaps = nil;
+    [self.kvoDelegate.kvoObserverMaps removeAllObjects];
     self.kvoDelegate = nil;
     
     if (self.needZombieProtector) {
