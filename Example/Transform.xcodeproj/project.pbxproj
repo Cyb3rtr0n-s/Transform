@@ -66,7 +66,7 @@
 		D9A9F5B5E13A240D9827241E /* Pods_Transform_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transform_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4D24392DE2E59B19F88AB3 /* Pods-Transform_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transform_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Transform_Tests/Pods-Transform_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A038333CF99128A456FB1F /* Pods-Transform_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transform_Example.debug.xcconfig"; path = "Target Support Files/Pods-Transform_Example/Pods-Transform_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F7C2BD0E27A4E1C297CE2283 /* Transform.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Transform.podspec; path = ../Transform.podspec; sourceTree = "<group>"; };
+		F7C2BD0E27A4E1C297CE2283 /* Transform.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Transform.podspec; path = ../Transform.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
