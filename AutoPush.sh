@@ -41,7 +41,7 @@ exit ${2}
 # Repo 相关
 PROJECT_F_DIR_PATH=$(dirname $(pwd))
 REPO_DIR_PATH="${PROJECT_F_DIR_PATH}/${SOURCE_SPEC_NAME}"
-echo("私有库路径：${REPO_DIR_PATH}")
+echo "私有库路径：${REPO_DIR_PATH}"
 
 cd ${REPO_DIR_PATH}
 
