@@ -42,7 +42,7 @@ const void * CTK_AssociationKey_KVO = &CTK_AssociationKey_KVO;
 - (id)ctk_forwardingTargetForSelector:(SEL)aSelector {
     ctk_debug_log([NSString stringWithFormat:@"Runtime forwarding selector %@ to protector", NSStringFromSelector(aSelector)]);
     if ([self isMethodOverride:[self class] selector:aSelector] ||
-        ![NSObject isMainBundleClass:[self class]]) {
+        ![NSObject isCustomClass:[self class]]) {
         return [self ctk_forwardingTargetForSelector:aSelector];
     }
     

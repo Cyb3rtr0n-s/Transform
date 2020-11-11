@@ -40,6 +40,12 @@ id _ctkProtected(id self, SEL sel) {
     return imp != superIMP;
 }
 
++ (BOOL)isCustomClass:(Class)cls {
+    NSString *mainBundlePath = [NSBundle mainBundle].bundlePath;
+    NSString *customClassBundlePath = [NSBundle bundleForClass:cls].bundlePath;
+    return cls && mainBundlePath && customClassBundlePath && [customClassBundlePath hasPrefix:mainBundlePath];
+}
+
 + (BOOL)isMainBundleClass:(Class)cls {
     return cls && [[NSBundle bundleForClass:cls] isEqual:[NSBundle mainBundle]];
 }

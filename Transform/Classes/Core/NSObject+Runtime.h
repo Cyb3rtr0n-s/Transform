@@ -33,7 +33,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Is one class's bundle is main bundle.
 /// @param cls cls
-+ (BOOL)isMainBundleClass:(Class)cls;
++ (BOOL)isMainBundleClass:(Class)cls; DEPRECATED_MSG_ATTRIBUTE("Please use +(BOOL)isCustomClass: instead.");
+
+
+/// Is custom class?
+/// @param cls cls
++ (BOOL)isCustomClass:(Class)cls;
 
 /// Register a class with a selector at runtime.
 /// @param aSelector aSelector
