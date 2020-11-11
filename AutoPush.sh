@@ -25,6 +25,7 @@ pod ipc spec ${POD_SPEC_PATH} >> ${POD_SPEC_JSON_PATH}
 VERSION=`cat ${POD_SPEC_JSON_PATH} |awk -F"[:]" '/version/{print $2}' |awk -F "[,]" '{print $1}' |sed 's/\"//g'`
 git tag ${VERSION}
 git push origin ${VERSION}
+git push
 
 if [ -f "${POD_SPEC_JSON}" ]; then
 rm ${POD_SPEC_JSON}
